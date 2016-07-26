@@ -12,21 +12,12 @@ public class WeatherBeam {
     private String weather_str;
     private String temp;
     private String now_temp;
-    private String aqi;//空氣質量指數
-    private String quality;
     private String felt_temp;
     private String humidity;
     private String wind;
     private String uv_index;
     private String dressing_index;
 
-    public String getAqi() {
-        return aqi;
-    }
-
-    public void setAqi(String aqi) {
-        this.aqi = aqi;
-    }
 
     public String getCity() {
         return city;
@@ -74,14 +65,6 @@ public class WeatherBeam {
 
     public void setNow_temp(String now_temp) {
         this.now_temp = now_temp;
-    }
-
-    public String getQuality() {
-        return quality;
-    }
-
-    public void setQuality(String quality) {
-        this.quality = quality;
     }
 
     public String getFelt_temp() {

@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@android:color/white"
     android:layout_height="match_parent"
+    android:id="@+id/swipeLayout"
+    android:background="@color/colorPrim"
     tools:context="cn.iyuboi.ybweather.MainActivity">
 
-    <!--<android.support.v4.widget.SwipeRefreshLayout-->
-    <!--android:id="@+id/swipeLayout"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="0dp"-->
-    <!--android:layout_weight="1"-->
-    <!--android:scrollbars="none"-->
-    <!--android:orientation="vertical">-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
 
-    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
-
-
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -120,6 +118,7 @@
                     <TextView
                         android:id="@+id/tv_aqi"
                         android:text="@string/default_text"
+                        android:layout_marginLeft="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                     <TextView
@@ -369,7 +368,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:text="@string/felt_temp"
+                    android:text="锻炼指数"
                     android:gravity="left"
                     android:paddingLeft="16dp"
                     style="@style/TextViewStyle" />
@@ -472,4 +471,5 @@
     </LinearLayout>
 
     </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>
