@@ -114,7 +114,7 @@ public class CityActivity extends Activity implements SearchView.OnQueryTextList
                             @Override
                             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                                 Intent intent = new Intent();
-                                intent.putExtra("city", list.get(i));
+                                intent.putExtra("city", (String)adapterView.getItemAtPosition(i));
                                 setResult(1, intent);
                                 finish();
                             }
