@@ -100,9 +100,6 @@ public class WeatherService extends Service{
                     }
                     isRunning = false;
                     break;
-//                case CALLBACK_ERROR:
-//                    Toast.makeText(getApplicationContext(), "loading error", Toast.LENGTH_SHORT).show();
-//                    break;
 
                 default:
                     break;

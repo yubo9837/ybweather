@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
 import android.view.View;
+import android.widget.AutoCompleteTextView;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -22,6 +23,8 @@ import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity {
+
+//    public AutoCompleteTextView autoCT;
 
     private WeatherService mService;
     private Context mContext;
@@ -242,6 +245,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 //        mService.getCityWeather();
+
+//        autoCT=(AutoCompleteTextView)findViewById(R.id.autoCT);
 
         tv_exercise=(TextView)findViewById(R.id.tv_felt_temp);
         tv_city = (TextView) findViewById(R.id.tv_city);
