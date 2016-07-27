@@ -3,7 +3,6 @@ package cn.iyuboi.ybweather;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.ViewUtils;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.Menu;
@@ -43,7 +42,7 @@ public class CityActivity extends Activity implements SearchView.OnQueryTextList
         initViews();
         getCities();
         lv_city.setTextFilterEnabled(true);
-//        searchView.setOnQueryTextListener(this);
+        searchView.setOnQueryTextListener(this);
         searchView.setSubmitButtonEnabled(true);
 
     }
@@ -115,7 +114,7 @@ public class CityActivity extends Activity implements SearchView.OnQueryTextList
                             @Override
                             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                                 Intent intent = new Intent();
-                                intent.putExtra("city", list.get(i));
+                                intent.putExtra("city", (String)adapterView.getItemAtPosition(i));
                                 setResult(1, intent);
                                 finish();
                             }
